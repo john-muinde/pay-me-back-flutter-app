@@ -24,12 +24,12 @@ class _ChatsState extends State<Chats> {
         itemBuilder: (context, index) {
           return Container(
             height: 85.0,
-            color: Color.fromARGB(1, 22, 22, 22),
+            color: const Color.fromARGB(1, 22, 22, 22),
             child: Center(
               child: ListTile(
                 tileColor: Colors.red,
                 selectedTileColor: Colors.blue,
-                hoverColor: Color.fromARGB(255, 252, 248, 2),
+                hoverColor: const Color.fromARGB(255, 252, 248, 2),
                 onTap: () {
                   print('John does want to seat');
                 },
@@ -49,7 +49,7 @@ class _ChatsState extends State<Chats> {
                       children: [
                         Text(
                           chats[index].username,
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Color.fromARGB(255, 224, 224, 224),
                             fontSize: 18.0,
                             fontWeight: FontWeight.w500,
@@ -73,7 +73,7 @@ class _ChatsState extends State<Chats> {
                       children: [
                         Text(
                           chats[index].message,
-                          style: TextStyle(
+                          style: const TextStyle(
                               color: Color.fromARGB(255, 160, 158, 158),
                               fontSize: 17.0,
                               fontWeight: FontWeight.w400),
