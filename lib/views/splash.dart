@@ -1,8 +1,7 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
-import 'package:okay/views/chatcarbat.dart';
-import 'package:okay/views/customWidgets.dart';
+import 'components/overlay_image_bg.dart';
+
+import 'components/pay_me_back.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -31,7 +30,11 @@ class _SplashScreenState extends State<SplashScreen> {
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-              builder: (context) => const ChatCarbat(),
+              builder: (context) => Scaffold(
+                body: const Center(
+                  child: Text('Hello'),
+                ),
+              ),
             ),
           );
         },
@@ -45,35 +48,9 @@ class _SplashScreenState extends State<SplashScreen> {
         ? Container(
             color: const Color.fromARGB(255, 240, 240, 240),
             child: const Center(
-              child: mainTextWidget(),
+              child: MainTextWidget(),
             ),
           )
-        : const Center(
-            child: Text('Hello there'),
-          );
-  }
-}
-
-class mainTextWidget extends StatelessWidget {
-  const mainTextWidget({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        mainAxisSize: MainAxisSize.max,
-        children: [
-          myTextWidget(
-              label: "Pay", MyColor: const Color.fromARGB(255, 23, 67, 187)),
-          myTextWidget(
-              label: "Me", MyColor: const Color.fromARGB(255, 218, 135, 27)),
-          myTextWidget(
-              label: "Back", MyColor: const Color.fromARGB(255, 23, 67, 187))
-        ],
-      ),
-    );
+        : const OverlayBg();
   }
 }
