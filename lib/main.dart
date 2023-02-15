@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:okay/views/splash.dart';
+import 'package:okay/views/screens/splash.dart';
 
 void main() => runApp(MyApp());
 

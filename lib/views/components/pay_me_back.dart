@@ -9,19 +9,17 @@ class MainTextWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        mainAxisSize: MainAxisSize.max,
-        children: [
-          myTextWidget(
-              label: "Pay", MyColor: const Color.fromARGB(255, 23, 67, 187)),
-          myTextWidget(
-              label: "Me", MyColor: const Color.fromARGB(255, 218, 135, 27)),
-          myTextWidget(
-              label: "Back", MyColor: const Color.fromARGB(255, 23, 67, 187))
-        ],
-      ),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisSize: MainAxisSize.max,
+      children: [
+        myTextWidget(
+            label: "Pay", MyColor: const Color.fromARGB(255, 23, 67, 187)),
+        myTextWidget(
+            label: "Me", MyColor: const Color.fromARGB(255, 218, 135, 27)),
+        myTextWidget(
+            label: "Back", MyColor: const Color.fromARGB(255, 23, 67, 187))
+      ],
     );
   }
 }
