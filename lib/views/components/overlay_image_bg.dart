@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:okay/views/components/pay_me_back.dart';
 
-class OverlayBg extends StatelessWidget {
+class OverLayBg extends StatelessWidget {
   final List props;
-  const OverlayBg({super.key, this.props = const []});
+
+  final double opacity;
+  const OverLayBg({super.key, this.props = const [], this.opacity = 0.5});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +14,6 @@ class OverlayBg extends StatelessWidget {
       children: [
         Container(
           decoration: const BoxDecoration(
-            color: Color.fromARGB(1, 0, 0, 0),
             image: DecorationImage(
               fit: BoxFit.cover,
               image: AssetImage('./assets/images/bg-image.jpg'),
@@ -20,7 +21,7 @@ class OverlayBg extends StatelessWidget {
           ),
         ),
         Container(
-          color: Colors.black.withOpacity(0.5),
+          color: Colors.black.withOpacity(opacity),
           width: double.infinity,
           height: double.infinity,
         ),

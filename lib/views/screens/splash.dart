@@ -31,7 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-              builder: (context) =>const Languages(),
+              builder: (context) => const Languages(),
             ),
           );
         },
@@ -48,7 +48,7 @@ class _SplashScreenState extends State<SplashScreen> {
               child: MainTextWidget(),
             ),
           )
-        : OverlayBg(
+        : OverLayBg(
             props: [
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
