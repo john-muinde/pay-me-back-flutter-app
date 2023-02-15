@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:okay/views/screens/details.dart';
+import 'package:okay/views/screens/detailsOTP.dart';
+import 'package:okay/views/screens/detailsPhoneNumber.dart';
 // import 'package:okay/views/screens/splash.dart';
 
 void main() => runApp(MyApp());
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: DetailsPhone(),
+        body: OTPScreen(),
       )
       //  ChatCarbat()
       ,
