@@ -50,6 +50,7 @@ class _SplashScreenState extends State<SplashScreen> {
           )
         : OverLayBg(
             props: [
+              const MainTextWidget(),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

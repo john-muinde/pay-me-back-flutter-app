@@ -1,21 +1,25 @@
 import 'package:flutter/material.dart';
 
-import 'views/screens/on_launch/details_name.dart';
+import '../../../routes.dart' as route;
 
-void main() => runApp(MyApp());
+import 'views/screens/on_launch/splash.dart';
+
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: DetailsNameScreen(),
+        body: SplashScreen(),
       )
       //  ChatCarbat()
       ,
+      onGenerateRoute: route.controller,
+      // initialRoute: route.detailsName
     );
   }
 }

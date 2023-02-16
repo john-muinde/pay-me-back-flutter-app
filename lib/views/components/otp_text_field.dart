@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
+typedef FunctionDataType = void Function(String num);
+
 class OTPTextfield extends StatelessWidget {
-  const OTPTextfield({super.key});
+  final FunctionDataType handlerFunction;
+  const OTPTextfield({super.key, required this.handlerFunction});
 
   @override
   Widget build(BuildContext context) {
@@ -15,6 +18,7 @@ class OTPTextfield extends StatelessWidget {
         onChanged: (value) {
           // handle OTP input
         },
+        onCompleted: handlerFunction,
 
         showCursor: true,
         pinTheme: PinTheme(

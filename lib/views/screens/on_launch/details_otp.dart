@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 import 'package:okay/views/components/overlay_image_bg.dart';
+import '../../../routes.dart' as route;
 
-import '../components/otp_text_field.dart';
+import '../../components/otp_text_field.dart';
 
 class OTPScreen extends StatelessWidget {
   const OTPScreen({super.key});
@@ -11,12 +12,12 @@ class OTPScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final mediaQuery = MediaQuery.of(context).size;
     return Scaffold(
-      body: Container(
+      body: SizedBox(
         height: mediaQuery.height,
         child: Stack(
           fit: StackFit.loose,
           children: [
-            Container(
+            SizedBox(
               height: mediaQuery.height * 0.70,
               child: const OverLayBg(
                 opacity: 0.3,
@@ -77,7 +78,10 @@ class OTPScreen extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    const OTPTextfield(),
+                    OTPTextfield(
+                      handlerFunction: (value) =>
+                          Navigator.pushNamed(context, route.detailsName),
+                    ),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8.0),
                       child: Text(

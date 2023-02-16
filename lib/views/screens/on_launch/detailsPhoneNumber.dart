@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+
 import 'package:okay/views/components/myTextInput.dart';
 import 'package:okay/views/components/overlay_image_bg.dart';
 import 'package:okay/views/components/square_tile.dart';
+
+import '../../../routes.dart' as route;
 
 class DetailsPhone extends StatelessWidget {
   const DetailsPhone({super.key});
@@ -79,10 +80,11 @@ class DetailsPhone extends StatelessWidget {
                   SizedBox(
                     width: double.maxFinite,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () =>
+                          Navigator.pushNamed(context, route.detailsOtp),
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all(
-                          Color.fromARGB(240,40, 46, 138),
+                          const Color.fromARGB(240, 40, 46, 138),
                         ),
                       ),
                       child: Padding(

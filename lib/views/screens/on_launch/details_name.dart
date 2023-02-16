@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 import 'package:okay/views/components/textWidget.dart';
 import 'package:okay/views/components/text_input.dart';
+import '../../../routes.dart' as route;
 
 import '../../components/overlay_image_bg.dart';
-
 
 class DetailsNameScreen extends StatelessWidget {
   DetailsNameScreen({super.key});
@@ -56,7 +56,8 @@ class DetailsNameScreen extends StatelessWidget {
                     Expanded(
                       flex: 1,
                       child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () =>
+                              Navigator.pushNamed(context, route.detailsPhone),
                           style: ButtonStyle(
                             backgroundColor: MaterialStateProperty.all(
                               Color(0XFF000E66),
@@ -73,7 +74,8 @@ class DetailsNameScreen extends StatelessWidget {
                     Expanded(
                       flex: 2,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () =>
+                            Navigator.pushNamed(context, route.home),
                         style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all(
                             const Color.fromARGB(240, 40, 46, 138),
