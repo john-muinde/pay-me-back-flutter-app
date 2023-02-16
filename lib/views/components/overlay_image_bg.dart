@@ -5,7 +5,8 @@ class OverLayBg extends StatelessWidget {
   final List props;
 
   final double opacity;
-  const OverLayBg({super.key, this.props = const [], this.opacity = 0.5});
+  const OverLayBg(
+      {super.key, this.props = const [MainTextWidget()], this.opacity = 0.5});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +29,6 @@ class OverLayBg extends StatelessWidget {
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const MainTextWidget(),
             if (props.isNotEmpty) ...props,
           ],
         )
