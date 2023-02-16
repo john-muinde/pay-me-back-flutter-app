@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'views/screens/details_name.dart';
-// import 'package:okay/views/screens/splash.dart';
+import 'views/screens/on_launch/details_name.dart';
 
 void main() => runApp(MyApp());
 

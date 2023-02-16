@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:okay/views/screens/languages.dart';
-import '../components/overlay_image_bg.dart';
 
-import '../components/pay_me_back.dart';
+import '../../components/overlay_image_bg.dart';
+import '../../components/pay_me_back.dart';
+import 'languages.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

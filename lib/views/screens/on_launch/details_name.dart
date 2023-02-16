@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:okay/views/components/textWidget.dart';
 import 'package:okay/views/components/text_input.dart';
 
-import '../components/overlay_image_bg.dart';
+import '../../components/overlay_image_bg.dart';
+
 
 class DetailsNameScreen extends StatelessWidget {
   DetailsNameScreen({super.key});
