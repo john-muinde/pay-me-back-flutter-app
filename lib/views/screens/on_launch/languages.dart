@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:okay/views/components/minor_components.dart';
 import '../../../routes.dart' as route;
 
 class Languages extends StatelessWidget {
@@ -7,15 +8,7 @@ class Languages extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'Select Language',
-          style: TextStyle(fontSize: 25),
-        ),
-        elevation: 0,
-        backgroundColor: Colors.transparent,
-        foregroundColor: Colors.black,
-      ),
+      appBar: myAppBar(title: 'Select Language') as PreferredSizeWidget,
       body: Container(
         padding: const EdgeInsets.all(7),
         child: ListView(

@@ -80,7 +80,8 @@ class OTPScreen extends StatelessWidget {
                   children: [
                     OTPTextfield(
                       handlerFunction: (value) =>
-                          Navigator.pushNamed(context, route.detailsName),
+                          Navigator.pushReplacementNamed(
+                              context, route.detailsName),
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8.0),

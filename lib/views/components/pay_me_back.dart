@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'textWidget.dart';
+import 'minor_components.dart';
 
 class MainTextWidget extends StatelessWidget {
   const MainTextWidget({

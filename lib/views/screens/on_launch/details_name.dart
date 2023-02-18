@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:okay/views/components/textWidget.dart';
+import 'package:okay/views/components/minor_components.dart';
 import 'package:okay/views/components/text_input.dart';
 import '../../../routes.dart' as route;
 
@@ -56,8 +56,8 @@ class DetailsNameScreen extends StatelessWidget {
                     Expanded(
                       flex: 1,
                       child: ElevatedButton(
-                          onPressed: () =>
-                              Navigator.pushNamed(context, route.detailsPhone),
+                          onPressed: () => Navigator.pushReplacementNamed(
+                              context, route.detailsPhone),
                           style: ButtonStyle(
                             backgroundColor: MaterialStateProperty.all(
                               Color(0XFF000E66),
@@ -74,8 +74,10 @@ class DetailsNameScreen extends StatelessWidget {
                     Expanded(
                       flex: 2,
                       child: ElevatedButton(
-                        onPressed: () =>
-                            Navigator.pushNamed(context, route.home),
+                        onPressed: () => Navigator.pushNamedAndRemoveUntil(
+                            context,
+                            route.home,
+                            ModalRoute.withName(route.home)),
                         style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all(
                             const Color.fromARGB(240, 40, 46, 138),
