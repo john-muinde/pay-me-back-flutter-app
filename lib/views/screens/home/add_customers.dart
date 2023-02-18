@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:okay/views/components/top_bottom_bar.dart';
 import 'package:okay/views/components/home_text_button.dart';
-import '../../../routes.dart' as route;
+import 'package:okay/views/components/top_bottom_bar.dart';
 
-class Home extends StatelessWidget {
-  const Home({super.key});
+class AddNewCustomer extends StatelessWidget {
+  const AddNewCustomer({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AdvancedAppBar(),
+      appBar: AdvancedAppBar(text: "Add Customer",mySize: 0.0),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -46,14 +45,20 @@ class Home extends StatelessWidget {
           MyTextButton(
             context: context,
             text: 'Add New Customer',
-            handlerFunction: () {
-              Navigator.pushNamed(context, route.addNewCustomer);
-            },
-            icon: true,
+            handlerFunction: () {},
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          MyTextButton(
+            context: context,
+            text: 'Add Manually',
+            handlerFunction: () {},
+            foreGroundColor: const Color(0xff333CC1),
+            backgroundColor: const Color(0xff333CC1).withOpacity(0.15),
           )
         ],
       ),
-      bottomNavigationBar: BottomNavBar(),
     );
   }
 }

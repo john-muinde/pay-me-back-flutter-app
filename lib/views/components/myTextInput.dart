@@ -9,13 +9,11 @@ class AllCountriesTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return IntlPhoneField(
       decoration: InputDecoration(
-        fillColor: Color(0XFFF2F2F2),
+        fillColor: const Color(0XFFF2F2F2),
         filled: true,
         labelText: 'Phone Number',
         border: OutlineInputBorder(
-          borderSide: BorderSide(),
           borderRadius: BorderRadius.circular(10),
-          
         ),
       ),
       initialCountryCode: 'KE',
