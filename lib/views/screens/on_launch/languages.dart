@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../routes.dart' as route;
 
 class Languages extends StatelessWidget {
   const Languages({super.key});
@@ -36,7 +37,8 @@ class Languages extends StatelessWidget {
                         child: Text(e == 'Swahili' ? 'Sw' : e[0]),
                       ),
                       title: Text(e),
-                      onTap: () {},
+                      onTap: () =>
+                          Navigator.pushNamed(context, route.detailsPhone),
                       contentPadding: const EdgeInsets.all(10),
                       trailing: const Icon(Icons.arrow_forward_ios),
                     ),

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:okay/views/screens/splash.dart';
 
-void main() => runApp(MyApp());
+import '../../../routes.dart' as route;
+
+import 'views/screens/on_launch/splash.dart';
+
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -15,6 +18,8 @@ class MyApp extends StatelessWidget {
       )
       //  ChatCarbat()
       ,
+      onGenerateRoute: route.controller,
+      // initialRoute: route.detailsName
     );
   }
 }
